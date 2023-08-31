@@ -63,6 +63,7 @@ def populate(table, dynamodb):
                 capacity_units_this_second = 0.0
 
                 print()
+                print()
 
             response = {}
 
@@ -77,6 +78,7 @@ def populate(table, dynamodb):
 
             finally:
                 item_end_time = time.time()
+                print('   ******   ' + str(item_start_time)[7:14] + ' ' + str(item_end_time)[7:14])
                 item_duration = round(round(item_end_time - item_start_time, 3) * 1000)
                 cu = response['ConsumedCapacity']['CapacityUnits']
 

@@ -1,6 +1,6 @@
-{ "TableName": "table2",
-  "Tags": [{"Key": "table_name", "Value": "table2"}],
-  "ProvisionedThroughput": {"WriteCapacityUnits": 1, "ReadCapacityUnits": 10},
+{ "TableName": "table3",
+  "Tags": [{"Key": "table_name", "Value": "table3"}],
+  "BillingMode": "PAY_PER_REQUEST",
   "AttributeDefinitions": [
       {"AttributeName": "PK", "AttributeType": "S"},
       {"AttributeName": "SK", "AttributeType": "S"}

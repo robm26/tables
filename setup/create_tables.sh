@@ -12,6 +12,7 @@ if [ $# -gt 0 ]
 
     aws dynamodb create-table --cli-input-json file://table1.json --region $REGION --endpoint-url $ENDPOINTURL --output $OUTPUT --query 'TableDescription.TableArn'
     aws dynamodb create-table --cli-input-json file://table2.json --region $REGION --endpoint-url $ENDPOINTURL --output $OUTPUT --query 'TableDescription.TableArn'
+    aws dynamodb create-table --cli-input-json file://table3.json --region $REGION --endpoint-url $ENDPOINTURL --output $OUTPUT --query 'TableDescription.TableArn'
 
 fi
 

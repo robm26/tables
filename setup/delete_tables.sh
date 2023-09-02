@@ -10,4 +10,6 @@ if [ $# -gt 0 ]
   else
      aws dynamodb delete-table --table-name table1 --region $REGION --endpoint-url $ENDPOINTURL --output $OUTPUT --query 'TableDescription.TableArn'
      aws dynamodb delete-table --table-name table2 --region $REGION --endpoint-url $ENDPOINTURL --output $OUTPUT --query 'TableDescription.TableArn'
+     aws dynamodb delete-table --table-name table3 --region $REGION --endpoint-url $ENDPOINTURL --output $OUTPUT --query 'TableDescription.TableArn'
+
 fi

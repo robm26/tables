@@ -1,0 +1,61 @@
+
+.rootContainer {
+    background-color:whitesmoke;
+    border: none;
+    border-radius:6px;
+    padding:5px;
+    font-family:Arial;
+}
+
+.menuList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gainsboro;
+    border-radius:6px;
+}
+
+.menuList li {
+    float: left;
+}
+/*.menuList li:first-of-type a {*/
+/*    */
+/*}*/
+.titleLink {
+    color:steelblue;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 16px;
+
+}
+.menuLink {
+    display: block;
+    color: dimgrey;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.menuLinkSelected {
+    display: block;
+    color: dimgrey;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: lightgrey;
+    font-weight:bold;
+
+}
+/*.menuList li a {*/
+/*    display: block;*/
+/*    color: dimgrey;*/
+/*    text-align: center;*/
+/*    padding: 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+.menuList li a:hover {
+    background-color: lightgrey;
+}
+

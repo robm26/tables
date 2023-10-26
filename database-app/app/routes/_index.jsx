@@ -12,8 +12,13 @@ export const meta = () => {
 export default function Index() {
   return (
     <div className="rootContainer">
+
       <Menu />
       <Outlet/>
+
+        <div className="intro">
+            Send read and write calls to your database.
+        </div>
     </div>
   );
 }

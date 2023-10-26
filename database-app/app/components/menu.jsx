@@ -21,7 +21,7 @@ export function Menu(params) {
                 <Link to="/" className='titleLink'>database-app</Link>
             </li>
             {engineList.map((x,i) => {
-                const menuLinkClass = data?.engine === x ? 'menuLinkSelected' : 'menuLink';
+                const menuLinkClass = data?.params?.job === x ? 'menuLinkSelected' : 'menuLink';
                 return (<li key={i+1}>
                     <Link to={"/" + x}  className={menuLinkClass}>
                         {x}
@@ -36,6 +36,7 @@ export function Menu(params) {
         <div id="menuContainer">
             {topLinks}
             <br/>
+
         </div>
     );
 }

@@ -7,6 +7,9 @@
     font-family:Arial;
 }
 
+.menuContainer {
+    font-family:Arial;
+}
 .menuList {
     list-style-type: none;
     margin: 0;
@@ -59,3 +62,107 @@
     background-color: lightgrey;
 }
 
+.jsonText {
+    background-color:lavender;
+    height:100px;
+    width: 500px;
+
+}
+.jobList {
+    background-color: gainsboro;
+    padding:5px;
+    border-radius:5px;
+}
+.jobList td {
+    border-bottom: 1px dashed green;
+}
+
+.jobList a {
+    text-decoration:none;
+    color: grey;
+}
+.jobList td {
+    padding:1px;
+}
+
+.jobList table {
+    padding:5px;
+}
+.errorPanel {
+    background-color: LavenderBlush;
+    margin:10px;
+    padding:10px;
+    border-radius:5px;
+}
+
+
+.sqlTable {
+    background-color: whitesmoke;
+    border:none;
+    padding:3px;
+    border-radius:6px;
+}
+
+.sqlTable th, td {
+    padding:5px;
+    margin:5px;
+    background-color: lightgrey;
+    color:dimgrey;
+    border-bottom:1px solid gainsboro;
+    border-right:1px solid gainsboro;
+
+}
+.sqlTable th {
+    font-weight:unset;
+    background-color: silver;
+    color:black;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: sticky;
+    top: 0;
+    border-bottom:3px solid whitesmoke;
+}
+
+.sqlTable [highlight='highlight'] {
+    border:2px solid red;
+
+}
+
+.sqlTableDiv {
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.sqlNull {
+    background-color: whitesmoke;
+}
+
+.sqlTable tr:hover td:empty {
+    background-color: whitesmoke;
+}
+.sqlTable tr:hover td {
+    filter: brightness(110%);
+}
+
+.sqlType {
+    background-color: yellow;
+}
+.intro {
+    color: dimgrey;
+    padding:10px;
+}
+
+.limit {
+    background-color: silver;
+    border: none;
+    padding:3px;
+    width:50px;
+    border-radius:5px;
+    text-align: center;
+}
+
+#jobForm button {
+
+    border-radius:3px;
+
+}

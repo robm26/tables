@@ -2,27 +2,19 @@ import {
     useLoaderData, Link, Form, useFetcher, useActionData
 }  from "@remix-run/react";
 
-import { json, redirect } from "@remix-run/node";
-
 import React from 'react';
 
 import { Menu } from "~/components/menu";
-
 import {SqlGrid} from "~/components/SqlGrid";
-
-import {runSql} from "~/components/database";
-
+import {runSql} from "../components/database.mjs";
 
 export async function action({ params, request }) {
     const body = await request.formData();
-    const limit = (body.get('limit'));
 
-    // const sqlStmt = body?._fields['sqlText'][0];
-    const sqlStmt = 'select * from orders limit ' + limit;
+    const sqlInput = (body.get('sqlInput'));
 
-    const result = await runSql(sqlStmt);
-    // console.log({result:result});
-    // const result = [{'name':'Luna'}];
+    let result;
+    result = await runSql(sqlInput);
 
     return({result: result.result, latency: result.latency});
 }
@@ -41,8 +33,7 @@ export default function JobIndex() {
    //  const keepfor = 365;
    //  const ttl = '  unix_timestamp(date_add(now(),interval ' + keepfor + ' day)) as ttl\n';
 
-
-    let stmt = 'hello';
+    let stmt = '';
 
     const [sql, setSql] = React.useState(stmt);
 
@@ -64,12 +55,18 @@ export default function JobIndex() {
         // console.log(JSON.stringify(dataset, null, 2));
     }
 
+    const defaultSql = 'select * \nfrom customers \nlimit 3';
+
     const sqlForm = (<Form id="jobForm" method="post"  >
         <table className='sqlTableForm'>
             <thead></thead>
             <tbody><tr><td>
 
-            <label>Limit: <input name="limit" className="limit" type="text" defaultValue="3"/></label>
+                <label>
+                    <textarea name="sqlInput" className="sqlInput" rows="6" cols="50" defaultValue={defaultSql}>
+                    </textarea>
+                </label>
+
                 <br/>
                 <br/>
                 <button type='submit'>
